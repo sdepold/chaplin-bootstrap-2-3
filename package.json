@@ -8,7 +8,8 @@
     "jade": "*",
     "sequelize": "~1.6.0-beta4",
     "sequelize-admin": "git://github.com/sdepold/sequelize-admin.git#features/bootstrap_2_3_0",
-    "sequelize-restful": "git://github.com/sdepold/sequelize-restful.git"
+    "sequelize-restful": "git://github.com/sdepold/sequelize-restful.git",
+    "sqlite3": "~2.1.5"
   },
   "devDependencies": {},
   "scripts": {

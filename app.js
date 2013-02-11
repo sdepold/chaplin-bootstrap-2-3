@@ -11,7 +11,10 @@ var express = require('express')
   , Sequelize = require('sequelize')
   , admin     = require('sequelize-admin')
 
-var sequelize = new Sequelize('sequelize_test', 'root')
+var sequelize = new Sequelize('sequelize_test', 'root', null, {
+  dialect: 'sqlite',
+  storage: './db.sqlite'
+})
 
 var User = sequelize.define('User', {
   username: Sequelize.STRING
@@ -48,4 +51,6 @@ sequelize.sync({ force: true }).success(function() {
   http.createServer(app).listen(app.get('port'), function(){
     console.log("Express server listening on port " + app.get('port'));
   })
+}).error(function() {
+  console.log(arguments)
 })
